@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>نمونه انتقال متن با استفاده از کوکی</title>
+</head>
+<body>
+    <h2>ارسال متن به مرورگر دیگر</h2>
+    <textarea id="textInput" rows="4" cols="50"></textarea><br>
+    <button onclick="sendText()">ارسال</button>
+
+    <script>
+        function sendText() {
+            var textToSend = document.getElementById("textInput").value;
+            document.cookie = "text=" + textToSend;
+            window.open("receiver.html", "_blank");
+        }
+    </script>
+</body>
+</html>
+<body>
+
+</body>
+
+</html>
