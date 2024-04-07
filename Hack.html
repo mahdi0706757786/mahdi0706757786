@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>نمونه انتقال متن با استفاده از کوکی</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نمایش آدرس وب سایت</title>
+<style>
+    #websiteUrl {
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body>
-    <h2>ارسال متن به مرورگر دیگر</h2>
-    <textarea id="textInput" rows="4" cols="50"></textarea><br>
-    <button onclick="sendText()">ارسال</button>
+    <h1>آدرس وب سایت شما:</h1>
+    <p id="websiteUrl">در حال بارگذاری...</p>
 
     <script>
-        function sendText() {
-            var textToSend = document.getElementById("textInput").value;
-            document.cookie = "text=" + textToSend;
-            window.open("receiver.html", "_blank");
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var websiteUrl = window.location.href;
+            document.getElementById('websiteUrl').innerText = websiteUrl;
+        });
     </script>
 </body>
-</html>
-<body>
-
-</body>
-
 </html>
